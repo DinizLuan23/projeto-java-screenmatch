@@ -1,28 +1,13 @@
 package diniz.luan.screenmatch.modelos;
 
-public class Filme {
-    public String nome;
-    public int anoDeLancamento;
-    public boolean incluidoNoPlano;
-    private double somaDasAvaliacoes;
-    private int totalDeAvaliacoes;
-    public int duracaoEmMinutos;
+public class Filme extends Titulo {
+    private String diretor;
 
-    public int getTotalDeAvaliacoes(){
-        return totalDeAvaliacoes;
+    public String getDiretor() {
+        return diretor;
     }
 
-    public void exibeFichaTecnica(){
-        System.out.println("Nome do diniz.luan.screenmatch.modelos.Filme: " + nome);
-        System.out.println("Ano de lançamento: " + anoDeLancamento);
-    }
-
-    public void avalia(double nota){
-        somaDasAvaliacoes += nota;
-        totalDeAvaliacoes ++;
-    }
-
-    public double obterMedia(){
-        return somaDasAvaliacoes / totalDeAvaliacoes;
+    public void setDiretor(String diretor) {
+        this.diretor = diretor;
     }
 }
